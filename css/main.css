@@ -1,0 +1,154 @@
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header nav{
+    background-color: #2196f3;
+    text-align: center;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 50px;
+    /** Remove gap between body and header  **/
+    padding: 5px;
+    top: 0;
+    border-width: 0 0 1px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    /** Material Elevated effect **/
+    box-shadow: 0px 2px 2px 2px #000000b0
+}
+
+#logo-text {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#logo-text:hover{
+    color: pink;
+}
+
+#map {
+    height: 400px;
+    max-height: 100%;
+    width: 100%;
+    background-color: #ccc;
+  }
+
+/** Main Content **/
+#maincontent {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 108px;
+}
+
+#restaurants-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+#restaurants-list:after {
+    content: "";
+    flex: 1 1 100%;
+    max-width: 32%;
+  }
+
+#restaurants-list .restaurant-card {
+    margin: 25px;
+    background-color: white;
+    box-shadow: 5px 5px 13px 4px grey;
+}
+
+.restaurant-card .info {
+    text-align: left;
+    margin: 25px;
+}
+
+/** Sub Location **/
+.info :nth-child(2) {
+    color: grey;
+    font-size: 1.2em;
+    margin-top: 15px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+}
+.info :nth-child(3) {
+    margin-bottom: 25px;
+}
+.restaurant-card .info a {
+    background-color: #f50057;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5%;
+}
+
+.restaurant-card .info h1 {
+    color: #f50057;
+}
+
+#restaurants-list .restaurant-card .restaurant-img{
+    min-width: 100%;
+    max-width: 100%;
+    height: 400px;
+}
+
+
+/* ====================== Restaurant Filtering ====================== 
+.filter-options {
+    width: 100%;
+    height: 50px;
+    align-items: center;
+  }
+  .filter-options h2 {
+    color: #f50057;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0 20px;
+  }
+  .filter-options select {
+    background-color: white;
+    border: 1px solid #fff;
+    font-family: Arial,sans-serif;
+    font-size: 11pt;
+    height: 35px;
+    letter-spacing: 0;
+    margin: 10px;
+    padding: 0 10px;
+    width: 200px;
+  }
+
+*/
+
+/* Restaurant Filtering */
+
+.filter-options h2 {
+    color: #f50057;
+    font-size: 1.6em;
+}
+
+.filter-options select {
+    background-color: white;
+    padding: 15px;
+}
+/* End filtering */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    background-color: #2196f3;
+    color: white;
+    font-size: 1.6em;
+    padding: 40px;
+}
+
+footer a {
+    color: #f50057;
+}
