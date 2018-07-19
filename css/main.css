@@ -3,13 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-header nav{
-    background-color: #2196f3;
-    text-align: center;
-    max-width: 100%;
-    min-width: 100%;
-    min-height: 50px;
-    /** Remove gap between body and header  **/
+header {
     padding: 5px;
     top: 0;
     border-width: 0 0 1px;
@@ -17,8 +11,15 @@ header nav{
     right: 0;
     left: 0;
     z-index: 1030;
+    background-color: #0097A7;
     /** Material Elevated effect **/
-    box-shadow: 0px 2px 2px 2px #000000b0
+    box-shadow: 0px 2px 2px 2px #000000b0;
+}
+header nav{
+    text-align: center;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 50px;    
 }
 
 #logo-text {
@@ -63,6 +64,8 @@ header nav{
     margin: 25px;
     background-color: white;
     box-shadow: 5px 5px 13px 4px grey;
+    border-radius: 20px;
+
 }
 
 .restaurant-card .info {
@@ -71,18 +74,19 @@ header nav{
 }
 
 /** Sub Location **/
-.info :nth-child(2) {
+ .info :nth-child(2) {
     color: grey;
     font-size: 1.2em;
     margin-top: 15px;
     border-bottom: 1px solid grey;
     padding-bottom: 15px;
 }
-.info :nth-child(3) {
+ .info :nth-child(3) {
     margin-bottom: 25px;
 }
+
 .restaurant-card .info a {
-    background-color: #f50057;
+    background-color: #FFC107;
     padding: 10px;
     color: white;
     text-decoration: none;
@@ -90,8 +94,8 @@ header nav{
     border-radius: 5%;
 }
 
-.restaurant-card .info h1 {
-    color: #f50057;
+ .info h1 {
+    color: #FFC107;
 }
 
 #restaurants-list .restaurant-card .restaurant-img{
@@ -99,56 +103,222 @@ header nav{
     max-width: 100%;
     height: 400px;
 }
-
-
-/* ====================== Restaurant Filtering ====================== 
-.filter-options {
-    width: 100%;
-    height: 50px;
-    align-items: center;
-  }
-  .filter-options h2 {
-    color: #f50057;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1;
-    margin: 0 20px;
-  }
-  .filter-options select {
-    background-color: white;
-    border: 1px solid #fff;
-    font-family: Arial,sans-serif;
-    font-size: 11pt;
-    height: 35px;
-    letter-spacing: 0;
-    margin: 10px;
-    padding: 0 10px;
-    width: 200px;
-  }
-
-*/
-
 /* Restaurant Filtering */
 
 .filter-options h2 {
-    color: #f50057;
+    color: #FFC107;
     font-size: 1.6em;
 }
 
 .filter-options select {
     background-color: white;
     padding: 15px;
+    border-radius: 20px;
 }
 /* End filtering */
 footer {
     text-align: center;
     margin-top: 40px;
-    background-color: #2196f3;
+    background-color: #0097A7;
     color: white;
     font-size: 1.6em;
     padding: 40px;
 }
 
 footer a {
-    color: #f50057;
+    color: #FFC107;
 }
+
+
+
+/** ----------------------- Restaurant Detail CSS --------------------------------------------------**/
+
+
+/** Header for inside page **/
+.inside header {
+    padding: 0px;
+}
+/** BreadCrumbs for Detail Page **/
+#breadcrumb {
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+    font-size: 1.6em;
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+    text-align: center;
+}
+
+/* Display list items side by side */
+#breadcrumb li {
+    display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+#breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+#breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+#breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/** Increase margin for detail pages **/
+.inside #maincontent {
+    margin-top: 151px;
+}
+
+#target-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#restaurant-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 5px 5px 13px 4px grey;
+    border-radius: 20px;
+    margin: 25px;
+}
+
+#restaurant-container .info {
+    text-align: left;
+    margin: 25px;
+}
+
+
+/* Restaurant Timings */
+
+#restaurant-hours {
+    font-size: 1.3em;
+    margin: 25px;
+    padding: 10px;
+    box-shadow: 0px 0px 4px 1px grey;
+    border-collapse: collapse;
+}
+
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    color: #FFC107;
+    background-color: rgba(255, 193, 7, 0.144);
+    box-shadow: 0px 0px 4px 1px grey;
+}
+
+
+/* Reviews Container */
+#reviews-container {
+    margin: 25px;
+    border-radius: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#reviews-container h2 {
+    text-align: center;
+    padding: 10px;
+    color: #FFC107;
+    font-size: 1.6em;
+}
+
+#reviews-list {
+    list-style-type: none;
+    text-align: left;
+    margin: 20px;
+    margin-left: 0px;
+}
+
+#reviews-list li {
+    margin: 10px;
+    box-shadow: 5px 5px 13px 4px grey;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-radius: 20px;
+
+}
+
+#reviews-list li .reviewer {
+    background-color: #FFC107;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    font-size: 1.3em;
+}
+
+#reviews-list li .review {
+    padding: 10px;
+}
+
+.review :first-child {
+    background-color: orange;
+    padding: 11px;
+    font-size: 1.2em;
+    color: white;
+    width: 96px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.review:last-child {
+    color: grey;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+/** ----------------------------------------------------Media Queries -------------------------------------------**/
+
+
+/** Center card if only single card can be fit in a row **/
+@media only screen and (min-width: 0px) and (max-width: 1220px)
+{
+    #restaurants-list {
+        justify-content: center;
+    }
+
+    #restaurants-list .restaurant-card .restaurant-img{
+        height: auto;;
+    }
+
+    #restaurant-container .restaurant-img {
+        height: auto;
+    }
+}
+/** Rearrange menu card and review card **/
+@media only screen and (min-width: 0px) and (max-width: 1366px) {
+  #target-content {
+      flex-direction: column;
+  }
+
+  #restaurant-container .restaurant-img {
+      height: auto;
+  }
+}
+
+
+
+
