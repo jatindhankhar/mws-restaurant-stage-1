@@ -260,7 +260,7 @@ tr:hover {
 }
 
 #reviews-list li .reviewer {
-    background-color: #FFC107;
+    background-color: black;
     margin: 0px;
     display: flex;
     flex-direction: row;

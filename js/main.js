@@ -179,6 +179,9 @@ createRestaurantHTML = (restaurant) => {
   address.innerHTML = restaurant.address;
   info.append(address);
 
+  // Add alt attribute for a11y
+  image.alt = `Photo of ${restaurant.name} in ${restaurant.neighborhood}`
+  
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
