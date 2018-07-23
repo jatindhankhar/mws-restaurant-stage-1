@@ -1,0 +1,9 @@
+{
+    "name": "Restaurants Viewer",
+    "short_name": "Restaurants",
+    "theme_color": "#2196f3",
+    "background_color": "#2196f3",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/"
+  }
