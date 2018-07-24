@@ -3,6 +3,7 @@
 
 <head>
   <link rel="manifest" href="/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Normalize.css for better cross-browser consistency -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
   <!-- Main CSS file -->
@@ -20,7 +21,7 @@
       <h1><a href="/" id="logo-text">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
+    <ul id="breadcrumb" role="navigation" aria-label="Breadcrumb">
       <li><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
@@ -32,7 +33,7 @@
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" aria-label="location" role="application"></div></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
@@ -40,7 +41,7 @@
     <section id="restaurant-container">
       <img id="restaurant-img">
       <div class="info">
-      <h1 id="restaurant-name"></h1>
+      <h2 id="restaurant-name"></h2>
         <p id="restaurant-cuisine"></p>
         <p id="restaurant-address"></p>
       </div>
