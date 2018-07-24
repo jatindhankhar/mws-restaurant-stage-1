@@ -180,7 +180,6 @@ footer a {
 }
 
 #target-content {
-    display: flex;
     flex-direction: row;
     justify-content: center;
 }
@@ -301,11 +300,12 @@ tr:hover {
     }
 
     #restaurants-list .restaurant-card .restaurant-img{
-        height: auto;;
+        height: auto;
     }
 
     #restaurant-container .restaurant-img {
         height: auto;
+        max-width:100%
     }
 }
 /** Rearrange menu card and review card **/
